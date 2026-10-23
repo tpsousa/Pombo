@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: pombo
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5433/pombo}
+    username: ${DB_USER:pombo}
+    password: ${DB_PASSWORD:pombo-dev}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate      # o Flyway é quem cria o esquema
+  flyway:
+    enabled: true
